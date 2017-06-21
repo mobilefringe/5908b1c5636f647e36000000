@@ -22,9 +22,15 @@ require(['Vue', 'vuex', 'vue_router', 'axios', 'jquery', 'vue2-filters', 'routes
     },
     actions: {
       LOAD_MALL_DATA: function ({ commit }) {
-        axios.get("https://www.mallmaverick.com/api/v4/halifaxcentre/all.json").then(response => {
+        axios.post('/user', {
+          version: 'v4',
+          endpoint: 'all',
+          property: 'halifaxcentre'
+        })
+        .then(function (response) {
           commit('SET_MALL_DATA', { list: response.data })
-        }).catch(error => {
+        })
+        .catch(function (error) {
           console.log("Data load error: " + error.message);
         });
       }
