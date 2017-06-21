@@ -22,7 +22,7 @@ require(['Vue', 'vuex', 'vue_router', 'axios', 'jquery', 'vue2-filters', 'routes
     },
     actions: {
       LOAD_MALL_DATA: function ({ commit }) {
-        axios.post('/user', {
+        axios.post('/api/v1/get_mall_data', {
           version: 'v4',
           endpoint: 'all',
           property: 'halifaxcentre'
