@@ -1,7 +1,7 @@
 <template>
   <div class="row">
     <div class="large-6 columns">
-        <h1>nboo</h1>
+        <h1>nboors</h1>
       <h1>{{title}}</h1>
       <p>{{description}}</p>
     </div>
